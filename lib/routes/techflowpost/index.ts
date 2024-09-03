@@ -23,7 +23,7 @@ async function handler(ctx) {
     const { data: response } = await got.post('https://www.techflowpost.com/ashx/index.ashx', {
         form: {
             pageindex: 1,
-            pagesize: ctx.req.query('limit') ?? 50,
+            pagesize: ctx.req.query('limit') ?? 10,
         },
     });
 
