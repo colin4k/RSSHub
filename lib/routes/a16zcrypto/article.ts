@@ -29,7 +29,7 @@ async function handler() {
             const $u = $(u);
             const item = {
                 title: $u.find('.col-sm-9 a .item-title').text(),
-                link: `${rootUrl}/${$u.find('.col-sm-9 a').attr('href')}`,
+                link: `${rootUrl}${$u.find('.col-sm-9 a').attr('href')}`,
                 pubDate: parseDate($u.find('.col-sm-3 .category-title').text().split(' / ')[0], 'M.D.YY'),
                 author: $u.find('.col-sm-9 a .sep-comma-and.posted-by span').text(),
             };
